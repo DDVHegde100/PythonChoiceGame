@@ -3,24 +3,10 @@ import time
 
 print("Choose your Path:Adventure Game./n/n")
 
-name=input("Enter your name:")
-age=int(input("Enter your age:"))
 
 health=10
-
-if age >= 3:
-    print("Nice! You are old enough to play!You aren't a literal baby.")
+print("Validating...")
     start=input("Shall we start the Adventure?").lower()
-else:
-    print("\nHow did you even get access to this program? You are not old enough to play...")
-    print("\nExiting...")
-    count = 0
-    while count != 5:
-        print(".", end="")
-        time.sleep(2/5)
-        count += 1
-    print()
-
 if(start=="yes" or (start=="y")):
         print("Starting.../n")
         time.sleep(1)
