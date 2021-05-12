@@ -5,13 +5,13 @@ print("Choose your Path:Adventure Game./n/n")
 name=input("Enter your name:")
 age=int(input("Enter your age:"))
 
-health=15
+health=10
 
-if age >= 10:
-    print("Nice! You are old enough to play!")
+if age >= 3:
+    print("Nice! You are old enough to play!You aren't a literal baby.")
     start=input("Shall we start the Adventure?").lower()
 else:
-    print("\nYou are not old enough to play...")
+    print("\nHow did you even get access to this program? You are not old enough to play...")
     print("\nExiting...")
     count = 0
     while count != 5:
@@ -44,7 +44,7 @@ if left_or_right == "left":
                 time.sleep(2/5)
                 count += 1
 
-        ans = input("\nNice, you follow the path and reach a lake... Do you swim across or go around (across/around)? ")
+        ans = input("\nAs you move left, you spot a shallow lake. Do you swim across or go around (across/around)? ")
 
 else:
             count = 0
@@ -53,10 +53,8 @@ else:
                 time.sleep(2/5)
                 count += 1
 
-            print("\nYou enter a jungle and get eaten by a bear...")
-
-            ans = input(
-                "\nNice, you follow the path and reach a lake... Do you swim across or go around (across/around)? ")
+            print("\nYou enter the forest, and fall into a thick anthill full of bullet ants. They engulf you and you die a brutal death...")
+            
 
             if ans == "around":
                 count = 0
@@ -73,12 +71,12 @@ else:
                     time.sleep(2/5)
                     count += 1
 
-                print("\nYou managed to get across, but were bit by a fish.")
+                print("\nAs you were swimming through, you were bitten by a few piranha. You managed to get across but have accumulated several minor injuries.")
                 print("You lose 5 health.")
                 health -= 5
 
             ans = input(
-                "\nYou notice a house and a river. Which do you go to (river/house)? ")
+                "\nAs you continue, you notice an old cabin next to a rapid river. Which do you go to (river/house)? ")
             if ans == "house":
                 count = 0
                 while count != 5:
@@ -87,27 +85,37 @@ else:
                     count += 1
             
                 print(
-                    "\nYou go to the house and are greeted by the owner... He doesn't like you and hits you with a stick.")
+                    "\nYou move toward the house and slowly open. To your surpise, a man is there, who doesn't seem happy with your entrance. He hits you with a stick and chases you out.")
                 print("You lose 5 health.")
                 health -= 5
-
+            else:
+                count = 0
+                while count != 5:
+                    print(".", end="")
+                    time.sleep(2/5)
+                    count += 1
+            
+                print(
+                    "\nYou trad across the river on a sheet of wood you found. You manage to get across and find that you have reached the end of the forest.")
+                
                 if health <= 0:
                     count = 0
                     while count != 5:
                         print(".", end="")
                         time.sleep(2/5)
                         count += 1
+                        print("\nYou lost all your health through this adventure, and youhave died.")
                 else:
                     count = 0
                     while count != 5:
                         print(".", end="")
                         time.sleep(2/5)
                         count += 1
+                        print("\You have survived this perilous journey. Good Job, you have won the game!")
+                    
 
-                    print("\nYou have survived... You win!")
-
-            print("\nYou enter a jungle and get eaten by a bear...")
-            print("\nYou now have 0 health and you lost the game...")
+            
+            
                 
 
         
